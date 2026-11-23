@@ -33,6 +33,6 @@ test('POST /posts creates a new post', async ({ request }) => {
     expect(body).toHaveProperty('userId');
 });
 test('GET /posts/200 returns 404 for non-existent post', async ({ request }) => {
-    const response = await request.get('/posts/1');
+    const response = await request.get('/posts/200');
     expect(response.status()).toBe(404);
 });
